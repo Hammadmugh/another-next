@@ -18,6 +18,12 @@
     --foreground: #ededed;
   }
 }
+@layer utilities {
+  .overflow-clip-margin-content {
+    overflow-clip-margin: content-box;
+  }
+}
+
 
 body {
   background: var(--background);
