@@ -1,4 +1,5 @@
 // import { RxCross2 } from "react-icons/rx";
+import Link from "next/link";
 import React from "react";
 import { RxCross2 } from "react-icons/rx";
 
@@ -28,36 +29,36 @@ const SideMenu = ({
       {/* Menu Items */}
       <ul className="px-0 my-0">
         <li className="bg-[#eebf35] border-b border-b-[#4c4c4c]">
-          <a
+          <Link
             className="text-black font-semibold block text-left text-[15px] px-5 py-[15px] no-underline"
             href="/"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li className="border-b border-b-[#4c4c4c]">
-          <a
+          <Link
             className="text-white font-semibold block text-left text-[15px] px-5 py-[15px] no-underline"
             href="#"
           >
             Deals & Offers
-          </a>
+          </Link>
         </li>
         <li className="border-b border-b-[#4c4c4c]">
-          <a
+          <Link
             className="text-white font-semibold block text-left text-[15px] px-5 py-[15px] no-underline"
             href="#"
           >
             Bids & Offers
-          </a>
+          </Link>
         </li>
         <li className="border-b border-b-[#4c4c4c]">
-          <a
+          <Link
             className="text-white font-semibold block text-left text-[15px] px-5 py-[15px] no-underline"
             href="#"
           >
             Manage Subscription
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
