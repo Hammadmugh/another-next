@@ -1,8 +1,16 @@
-import { MdNorthEast } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa6";
+import {
+  MdNorthEast,
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 import { FaStar } from "react-icons/fa6";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import ServicesLink from "@/components/ServicesLink";
+import { FaRegHeart } from "react-icons/fa";
+import ServicesSlider from "@/components/ServicesSlider";
 
 const HomePage = () => {
   return (
@@ -15,52 +23,7 @@ const HomePage = () => {
         className=" bg-cover relative bg-[#365953] bg-top bg-no-repeat py-[50px] z-10 overflow-hidden block [unicode-bidi:isolate]"
       >
         <div className="relative z-1 pb-[30px] ">
-          <div className="max-w-[1290px] bg-[#FFB902] p-[15px] rounded-[10px] ">
-            <div className="gap-5 py-0 pr-10 pl-[15px] items-center flex justify-between flex-wrap">
-              <Link
-                className="text-black font-normal text-[16px] outline-0 no-underline cursor-pointer "
-                href={"#"}
-              >
-                Artists And Digital Services
-              </Link>
-              <Link
-                className="text-black font-normal text-[16px] outline-0 no-underline cursor-pointer "
-                href={"#"}
-              >
-                Animal/ Pets Services
-              </Link>
-              <Link
-                className="text-black font-normal text-[16px] outline-0 no-underline cursor-pointer "
-                href={"#"}
-              >
-                Cleaning Service
-              </Link>
-              <Link
-                className="text-black font-normal text-[16px] outline-0 no-underline cursor-pointer "
-                href={"#"}
-              >
-                Carpentry
-              </Link>
-              <Link
-                className="text-black font-normal text-[16px] outline-0 no-underline cursor-pointer "
-                href={"#"}
-              >
-                Automobile Services
-              </Link>
-              <Link
-                className="text-black font-normal text-[16px] outline-0 no-underline cursor-pointer "
-                href={"#"}
-              >
-                Concierge Services
-              </Link>
-              <Link
-                className="text-black font-normal text-[16px] outline-0 no-underline cursor-pointer "
-                href={"#"}
-              >
-                Event Services
-              </Link>
-            </div>
-          </div>
+          <ServicesLink />
         </div>
         <div className="relative z-1 lg:max-w-[960px] md:max-w-[720px] max-w-[540px]  w-full px-1.5 mx-auto">
           <div className="items-center flex flex-wrap -mx-3 mt-0">
@@ -210,6 +173,97 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
               ></Image>
             </div>
           </div>
+          <div className="mb-4 mt-12 items-center justify-between flex">
+            <div className="text-white items-center gap-2 flex">
+              <h4 className="my-0 text-[calc(1.275rem + .3vw)] font-medium leading-1.2">
+                Continue browsing{" "}
+              </h4>
+              <FaArrowRight />
+            </div>
+            <div className="[direction:initial]">
+              <button className="py-[5px] px-[5px] bg-transparent text-white border border-white rounded-full text-[18px] ml-2 cursor-pointer normal-case m-0 outline-none">
+                <MdOutlineKeyboardArrowLeft />
+              </button>
+              <button className="py-[5px] px-[5px] bg-transparent text-white border border-white rounded-full text-[18px] ml-2 cursor-pointer normal-case m-0 outline-none">
+                <MdOutlineKeyboardArrowRight />
+              </button>
+            </div>
+          </div>
+          <ServicesSlider />
+          {/* Services Slider */}
+          {/* <div className="ltr select-none touch-pan-y relative block mt-6">
+            <div className="transform-gpu translate-x-0 translate-y-0 overflow-hidden m-0 p-0 relative block">
+              <div className="opacity-100 w-[4992px] transform-gpu -translate-x-[3120px] translate-y-0 relative block top-0 left-0 ">
+                <div className="w-[297px] block bg-white rounded-[20px] mb-[30px] overflow-hidden relative mr-[15px] float-left h-full min-h-px ">
+                  <div className="px-4 py-2 items-center justify-between flex">
+                    <div className="items-center gap-2 flex rounded-full bg-[#ededed] object-cover align-middle">
+                      <Image
+                        className="transition-all duration-400 ease-in-out block"
+                        loading="lazy"
+                        src={"/images/17478226103614.jpg"}
+                        alt="img"
+                        height={30}
+                        width={30}
+                      ></Image>
+                      <div className="flex-col flex">
+                        <span title="BrightWave Technologies" className="">
+                          BrightWave..
+                        </span>
+                        <span className="text-[#0d6efd]">Top Rated Seller</span>
+                      </div>
+                    </div>
+                    <i className="inline-block not-italic leading-none"></i>
+                  </div>
+                  <Link
+                    className="text-[#0d6efd] outline-none no-underline cursor-pointer"
+                    href={"#"}
+                    tabIndex={-1}
+                  >
+                    <div className="overflow-hidden relative">
+                      <Image
+                        src={"/images/17593249072533.webp"}
+                        loading="lazy"
+                        alt="img"
+                        className="transition-all duration-400 ease-in-out block w-full p-2.5 rounded-[20px] object-cover object-center align-middle"
+                        height={140}
+                        width={277}
+                      ></Image>
+                    </div>
+                  </Link>
+                  <div className="p-[15px] relative">
+                    <div className="mb-2 items-center gap-2 flex">
+                      <div>
+                        <i className="font-normal inline-block not-italic normal-case leading-none antialiased select-none">
+                          <FaRegHeart />
+                        </i>
+                        <span className="text-[#6c757d]">0</span>
+                      </div>
+                    </div>
+                    <Link href={"#"} tabIndex={-1}>
+                      <h6 className="text-[#222325] text-[15px] min-h-9 mb-2 mt-0 font-medium leading-1.2 cursor-pointer">
+                        Business Functions
+                      </h6>
+                    </Link>
+                    <span className="text-[#F3A763]">
+                      <i className="inline-block not-italic normal-case leading-none antialiased font-black select-none">
+                        <FaStar />
+                      </i>
+                      5.0
+                      <span className="text-[#6c757d]">(16)</span>
+                    </span>
+                    <h3 className="text-[#365953] text-[15px] mb-0 mt-1 font-medium leading-1.2 ">
+                      <span className="text-[#74767E] text-[10px] font-semibold leading-1.2 ">
+                        STARTING AT
+                      </span>
+                      <strong>AED</strong>
+                      2,000.00
+                    </h3>
+                  </div>
+                </div>
+                <div className="w-[297px] block bg-white rounded-[20px] mb-[30px] overflow-hidden relative mr-[15px] float-left"></div>
+              </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </>
