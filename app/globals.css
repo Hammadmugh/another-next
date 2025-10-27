@@ -24,6 +24,19 @@
   }
 }
 
+/* Keen Slider basic styles */
+.keen-slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.keen-slider__slide {
+  min-width: 100%;
+  transition: transform 0.3s ease;
+}
+
 
 
 body {

@@ -13,7 +13,7 @@ interface ServiceCardProps {
   description: string;
   rating: number;
   reviews: number;
-  price: number;
+  price: string;
   currency: string;
   favoriteCount: number;
 }
@@ -23,7 +23,6 @@ const ServicesCard: React.FC<ServiceCardProps> = ({
   sellerStatus,
   sellerImg,
   serviceImg,
-  title,
   description,
   rating,
   reviews,
@@ -32,72 +31,59 @@ const ServicesCard: React.FC<ServiceCardProps> = ({
   favoriteCount,
 }) => {
   return (
-    <div className="w-[297px] block bg-white rounded-[20px] mb-[30px] overflow-hidden relative mr-[15px] float-left h-full min-h-px ">
-      <div className="px-4 py-2 items-center justify-between flex">
-        <div className="items-center gap-2 flex rounded-full bg-[#ededed] object-cover align-middle">
+    <div className="w-[290px] bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300">
+      <div className="flex items-center justify-between px-4 pt-3">
+        <div className="flex items-center gap-2">
           <Image
-            className="transition-all duration-400 ease-in-out block"
-            loading="lazy"
             src={sellerImg}
-            alt="img"
-            height={30}
-            width={30}
-          ></Image>
-          <div className="flex-col flex">
-            <span title={sellerName} className="">
-              {title}
+            alt={sellerName}
+            width={36}
+            height={36}
+            className="rounded-full object-cover border border-gray-300"
+          />
+          <div className="flex flex-col">
+            <span className="text-sm font-semibold text-gray-800">
+              {sellerName}
             </span>
-            <span className="text-[#0d6efd]">{sellerStatus}</span>
+            <span className="text-[13px] text-[#0098FF] font-medium leading-tight">
+              {sellerStatus}
+            </span>
           </div>
         </div>
-        <i className="inline-block not-italic leading-none">
-          <FaEllipsisVertical />{" "}
-        </i>
+        <FaEllipsisVertical className="text-gray-400 text-lg cursor-pointer" />
       </div>
-      <Link
-        className="text-[#0d6efd] outline-none no-underline cursor-pointer"
-        href={"#"}
-        tabIndex={-1}
-      >
-        <div className="overflow-hidden relative">
-          <Image
-            src={serviceImg}
-            loading="lazy"
-            alt="img"
-            className="transition-all duration-400 ease-in-out block w-full p-2.5 rounded-[20px] object-cover object-center align-middle"
-            height={140}
-            width={277}
-          ></Image>
-        </div>
+      <Link href="#" className="block cursor-pointer">
+        <Image
+          src={serviceImg}
+          alt={description}
+          width={260}
+          height={160}
+          className="rounded-xl mx-auto mt-3 w-[90%] h-[150px] object-cover"
+        />
       </Link>
-      <div className="p-[15px] relative">
-        <div className="mb-2 items-center gap-2 flex">
-          <div>
-            <i className="font-normal inline-block not-italic normal-case leading-none antialiased select-none">
-              <FaRegHeart />
-            </i>
-            <span className="text-[#6c757d]">{favoriteCount}</span>
-          </div>
+      <div className="px-4 pb-4 pt-3">
+        <div className="flex items-center gap-1 text-gray-500 mb-2">
+          <FaRegHeart className="text-gray-500" />
+          <span className="text-sm">{favoriteCount}</span>
         </div>
-        <Link href={"#"} tabIndex={-1}>
-          <h6 className="text-[#222325] text-[15px] min-h-9 mb-2 mt-0 font-medium leading-1.2 cursor-pointer">
+        <Link href="#" className="no-underline">
+          <h6 className="text-[#222325] text-[14px] font-medium leading-snug mb-2 hover:text-[#0098FF] transition-colors">
             {description}
           </h6>
         </Link>
-        <span className="text-[#F3A763]">
-          <i className="inline-block not-italic normal-case leading-none antialiased font-black select-none">
-            <FaStar />
-          </i>
-          {rating}
-          <span className="text-[#6c757d]">({reviews})</span>
-        </span>
-        <h3 className="text-[#365953] text-[15px] mb-0 mt-1 font-medium leading-1.2 ">
-          <span className="text-[#74767E] text-[10px] font-semibold leading-1.2 ">
-            STARTING AT
+        <div className="flex items-center mb-2">
+          <FaStar className="text-[#F3A763] mr-1 text-sm" />
+          <span className="text-[#F3A763] text-[14px] font-semibold">
+            {rating}
           </span>
-          <strong>{currency}</strong>
-          {price}
-        </h3>
+          <span className="text-[#6c757d] text-[13px] ml-1">({reviews})</span>
+        </div>
+        <p className="text-[#74767E] text-[11px] font-semibold uppercase mb-0">
+          Starting at{" "}
+          <span className="text-[#365953] text-[15px] font-semibold">
+            {currency} {price}
+          </span>
+        </p>
       </div>
     </div>
   );
