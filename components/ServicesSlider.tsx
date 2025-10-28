@@ -17,11 +17,11 @@ const ServicesSlider = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        spaceBetween={15}
+        spaceBetween={10}
         breakpoints={{
           320: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
         }}
         speed={1200}
       >

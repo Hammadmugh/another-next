@@ -3,8 +3,8 @@ import React from "react";
 
 const ServicesLink = () => {
   return (
-    <div className="max-w-[1290px] bg-[#FFB902] p-[15px] rounded-[10px] ">
-      <div className="gap-5 py-0 pr-10 pl-[15px] items-center flex justify-between flex-wrap">
+    <div className="md:mx-3.5 bg-[#FFB902] p-[15px] rounded-[10px] ">
+      <div className="gap-5 py-0 pr-10 pl-[15px] items-center md:flex md:justify-between flex-col justify-center flex-wrap">
         <Link
           className="text-black font-normal text-[16px] outline-0 no-underline cursor-pointer "
           href={"#"}
