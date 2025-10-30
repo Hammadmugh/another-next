@@ -34,7 +34,7 @@ const EservicesSectionCard: React.FC<EservicesSectionProps> = ({
         <div>
           <Link
             href={"#"}
-            className="text-[15px] text-white bg-[#365953] rounded-lg text-center cursor-pointer select-none py-1.5 px-3 hover:bg-black"
+            className="text-[15px] text-white bg-[#365953] rounded-lg text-center cursor-pointer select-none py-1.5 px-3 transition-colors duration-300 hover:bg-black"
           >
             Services
           </Link>

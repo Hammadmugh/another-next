@@ -14,6 +14,13 @@ import GallorySection from "@/components/GallorySection";
 import DealSectionMain from "@/components/DealSectionMain";
 import EservicesSectionMain from "@/components/EservicesSectionMain";
 import RserviceSectionMain from "@/components/RserviceSectionMain";
+import SellerSectionMain from "@/components/SellerSectionMain";
+import DoubtSectionMain from "@/components/DoubtSectionMain";
+import { userImgsData } from "../data/usersImgs";
+import Users from "@/components/Users";
+import GetSectionMain from "@/components/GetSectionMain";
+import NewsLetterSection from "@/components/NewsLetterSection";
+import FooterComponent from "@/components/FooterComponent";
 
 const HomePage = () => {
   return (
@@ -118,38 +125,9 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
                     <div className="flex items-center justify-center ml-[35px] ">
                       <div>
                         <p className="text-black text-[10px] my-0 flex">
-                          <Image
-                            className="-ml-5 align-middle"
-                            loading="lazy"
-                            src={"/images/user-1.png"}
-                            alt="user 1"
-                            width={50}
-                            height={50}
-                          ></Image>
-                          <Image
-                            className="-ml-5 align-middle"
-                            loading="lazy"
-                            src={"/images/user-2.png"}
-                            alt="user 1"
-                            width={50}
-                            height={50}
-                          ></Image>
-                          <Image
-                            className="-ml-5 align-middle"
-                            loading="lazy"
-                            src={"/images/user-3.png"}
-                            alt="user 1"
-                            width={50}
-                            height={50}
-                          ></Image>
-                          <Image
-                            className="-ml-5 align-middle"
-                            loading="lazy"
-                            src={"/images/user-4.png"}
-                            alt="user 1"
-                            width={50}
-                            height={50}
-                          ></Image>
+                          {userImgsData.map((data) => {
+                            return <Users key={data.id} imgSrc={data.imgSrc} />;
+                          })}
                         </p>
                       </div>
                       <div className="mx-4">
@@ -199,6 +177,11 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
       <DealSectionMain />
       <EservicesSectionMain />
       <RserviceSectionMain />
+      <SellerSectionMain />
+      <DoubtSectionMain />
+      <GetSectionMain />
+      <NewsLetterSection />
+      <FooterComponent />
     </>
   );
 };
