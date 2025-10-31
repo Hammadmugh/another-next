@@ -1,9 +1,5 @@
 import { FaArrowRight } from "react-icons/fa6";
-import {
-  MdNorthEast,
-  MdOutlineKeyboardArrowLeft,
-  MdOutlineKeyboardArrowRight,
-} from "react-icons/md";
+import { MdNorthEast } from "react-icons/md";
 import { FaStar } from "react-icons/fa6";
 import Link from "next/link";
 import React from "react";
@@ -71,7 +67,7 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
               </div>
               <div className="mt-6 flex flex-wrap -mx-3 text-white">
                 <div className="relative lg:flex-none lg:w-[50%] flex-none w-[50%] max-w-full px-3 mt-0 text-white">
-                  <div className="bg-white h-[135px] p-[25px] rounded-[10px] flex gap-4 items-center justify-center">
+                  <div className="bg-white h-[150px] p-[25px] rounded-[10px] flex gap-4 items-center justify-center">
                     <div>
                       <h3 className="mb-[5px] text-2xl font-bold text-black mt-0 leading-1.2">
                         20+
@@ -99,7 +95,7 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
                   </div>
                 </div>
                 <div className="lg:flex-none lg:w-[50%] flex-none w-[50%] max-w-full px-3 mt-0 relative ">
-                  <div className=" bg-white h-[135px] py-[25px] px-[50px] rounded-[10px] ">
+                  <div className=" bg-white h-[150px] py-[25px] px-[50px] rounded-[10px] ">
                     <div className="mb-2 items-center gap-4 flex ">
                       <h3 className=" text-2xl font-bold text-black my-0 ">
                         4.9
@@ -122,7 +118,7 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
                         </li>
                       </div>
                     </div>
-                    <div className="flex items-center justify-center ml-[35px] ">
+                    <div className="md:grid md:grid-cols-2 md:gap-10 lg:grid lg:grid-cols-2 lg:gap-10 flex flex-col items-center justify-center ml-[35px] ">
                       <div>
                         <p className="text-black text-[10px] my-0 flex">
                           {userImgsData.map((data) => {
@@ -130,7 +126,7 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
                           })}
                         </p>
                       </div>
-                      <div className="mx-4">
+                      <div className="mx-4 md:block md:gap-0 lg:block lg:gap-0 flex gap-1 justify-center items-center ">
                         <h4 className="text-black text-[14px] font-bold my-0 leading-1.2">
                           100k
                         </h4>
@@ -143,7 +139,7 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
                 </div>
               </div>
             </div>
-            <div className="text-center lg:flex-none lg:w-[50%] md:flex-none md:w-full max-w-full px-3 mt-0 relative">
+            <div className="lg:flex-none lg:w-[50%] md:flex-none md:w-full max-w-full px-3 mt-2 relative">
               <Image
                 className="mt-0 md:mt-7 lg:mt-0 w-full object-fill max-w-full h-auto align-middle"
                 loading="lazy"
@@ -152,22 +148,6 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
                 height={456}
                 width={365}
               ></Image>
-            </div>
-          </div>
-          <div className="mb-4 mt-12 items-center justify-between flex">
-            <div className="text-white items-center gap-2 flex">
-              <h4 className="my-0 text-[calc(1.275rem + .3vw)] font-medium leading-1.2">
-                Continue browsing{" "}
-              </h4>
-              <FaArrowRight />
-            </div>
-            <div className="[direction:initial]">
-              <button className="py-[5px] px-[5px] bg-transparent text-white border border-white rounded-full text-[18px] ml-2 cursor-pointer normal-case m-0 outline-none">
-                <MdOutlineKeyboardArrowLeft />
-              </button>
-              <button className="py-[5px] px-[5px] bg-transparent text-white border border-white rounded-full text-[18px] ml-2 cursor-pointer normal-case m-0 outline-none">
-                <MdOutlineKeyboardArrowRight />
-              </button>
             </div>
           </div>
           <ServicesSlider />

@@ -29,23 +29,7 @@ const RserviceSectionMain = () => {
                 </p>
               </div>
             </div>
-            <div className="flex justify-end">
-              <button className="py-[5px] px-[5px] bg-transparent text-white border border-white rounded-full text-[18px] ml-2 cursor-pointer normal-case m-0 outline-none">
-                <MdOutlineKeyboardArrowLeft />
-              </button>
-              <button className="py-[5px] px-[5px] bg-transparent text-white border border-white rounded-full text-[18px] ml-2 cursor-pointer normal-case m-0 outline-none">
-                <MdOutlineKeyboardArrowRight />
-              </button>
-            </div>
             <ServicesSlider />
-            <div className="flex justify-end mt-7">
-              <button className="py-[5px] px-[5px] bg-transparent text-white border border-white rounded-full text-[18px] ml-2 cursor-pointer normal-case m-0 outline-none">
-                <MdOutlineKeyboardArrowLeft />
-              </button>
-              <button className="py-[5px] px-[5px] bg-transparent text-white border border-white rounded-full text-[18px] ml-2 cursor-pointer normal-case m-0 outline-none">
-                <MdOutlineKeyboardArrowRight />
-              </button>
-            </div>
             <ServicesSlider />
           </div>
         </div>
