@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import EservicesSectionCard from "./EservicesSectionCard";
+import { prisma } from "@/lib/db";
 
-const EservicesSectionMain = () => {
+const EservicesSectionMain = async () => {
+  const data = await prisma.eservices.findMany();
   return (
     <section>
       <div
@@ -28,7 +30,7 @@ const EservicesSectionMain = () => {
               </div>
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
-              {EservicesSectionCardData.map((data) => {
+              {data.map((data) => {
                 return (
                   <EservicesSectionCard
                     key={data.id}

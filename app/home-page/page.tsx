@@ -1,4 +1,3 @@
-import { FaArrowRight } from "react-icons/fa6";
 import { MdNorthEast } from "react-icons/md";
 import { FaStar } from "react-icons/fa6";
 import Link from "next/link";
@@ -17,6 +16,7 @@ import Users from "@/components/Users";
 import GetSectionMain from "@/components/GetSectionMain";
 import NewsLetterSection from "@/components/NewsLetterSection";
 import FooterComponent from "@/components/FooterComponent";
+import ServicesSliderWraper from "@/components/ServicesSliderWraper";
 
 const HomePage = () => {
   return (
@@ -34,17 +34,14 @@ const HomePage = () => {
         <div className="relative z-1 lg:max-w-[1140px] md:max-w-[720px] max-w-[540px]  w-full px-1.5 mx-auto">
           <div className="items-center flex flex-wrap -mx-3 mt-0">
             <div className="relative text-white lg:flex-none lg:w-[50%] md:flex-none md:w-full sm:flex-none sm:w-[50%] max-w-full px-3 mt-0">
-              <div className="p-12 rounded-[20px] bg-[#2A2925] h-[350px] text-white">
+              <div className="p-12 rounded-[20px] bg-[#2A2925] lg:h-[350px] md:h-[350px] text-white">
                 <h1 className="text-[25px] font-bold leading-1.3 mt-0 mb-2">
                   Driving <span className="text-[#FFB902]">Business</span>{" "}
                   Success with <br /> Innovative{" "}
                   <span className="text-[#FFB902]">Solutions</span> Tailored{" "}
                   <br /> for You
                 </h1>
-                <p
-                  style={{ fontFamily: "sans-serif" }}
-                  className="text-[16px] mx-0 mt-[30px] mb-[34px] text-white"
-                >
+                <p className="text-[16px] mx-0 mt-[30px] mb-[34px] text-white">
                   Transforming the service market for small and medium-sized
                   businesses. Discover cutting-edge solutions crafted to
                   optimize your operations, simplify your service needs, and
@@ -150,7 +147,7 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
               ></Image>
             </div>
           </div>
-          <ServicesSlider />
+          <ServicesSliderWraper />
         </div>
       </div>
       <GallorySection />

@@ -4,6 +4,7 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
+import ServicesSliderWraper from "./ServicesSliderWraper";
 
 const RserviceSectionMain = () => {
   return (
@@ -29,8 +30,8 @@ const RserviceSectionMain = () => {
                 </p>
               </div>
             </div>
-            <ServicesSlider />
-            <ServicesSlider />
+            <ServicesSliderWraper />
+            <ServicesSliderWraper />
           </div>
         </div>
       </div>

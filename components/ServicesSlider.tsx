@@ -5,15 +5,15 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
-import { servicesData } from "@/app/data/servicesData";
 import ServicesCard from "./ServicesCard";
+import type { Services } from "@prisma/client";
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 
-const ServicesSlider: React.FC = () => {
+const ServicesSlider = ({ data }: { data: Services[] }) => {
   const prevBtnRef = useRef<HTMLButtonElement | null>(null);
   const nextBtnRef = useRef<HTMLButtonElement | null>(null);
 
@@ -72,7 +72,7 @@ const ServicesSlider: React.FC = () => {
             swiper.navigation.update();
           }}
         >
-          {servicesData.map((service) => (
+          {data.map((service) => (
             <SwiperSlide key={service.id}>
               <ServicesCard {...service} />
             </SwiperSlide>

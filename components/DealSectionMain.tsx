@@ -4,8 +4,10 @@ import { FaStar } from "react-icons/fa";
 import { FaEllipsisVertical } from "react-icons/fa6";
 import DealSectionCard from "./DealSectionCard";
 import { DealSectionCardData } from "@/app/data/DealSectionCardData";
+import { prisma } from "@/lib/db";
 
-const DealSectionMain = () => {
+const DealSectionMain = async () => {
+  const data = await prisma.deals.findMany();
   return (
     <section>
       <div
@@ -31,7 +33,7 @@ const DealSectionMain = () => {
               </div>
             </div>
             <div className="h-full lg:grid lg:grid-cols-2 grid grid-cols-1 lg:-mx-19 ">
-              {DealSectionCardData.map((data) => {
+              {data.map((data) => {
                 return (
                   <DealSectionCard
                     key={data.id}

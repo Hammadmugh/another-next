@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import GalloryCard from "./GalloryCard";
+import { prisma } from "@/lib/db";
 
-const GallorySection = () => {
+const GallorySection = async () => {
+  const data = await prisma.gallory.findMany();
   return (
     <section>
       <div
@@ -30,7 +32,7 @@ const GallorySection = () => {
               </div>
             </div>
             <div className="pt-12 h-full flex flex-wrap -mx-3 mt-0 ">
-              {GalloryCardData.map((galleryData) => {
+              {data.map((galleryData) => {
                 return (
                   <GalloryCard
                     key={galleryData.id}

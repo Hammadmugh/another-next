@@ -1,8 +1,9 @@
 import React from "react";
 import SellerCard from "./SellerCard";
-import { sellerData } from "@/app/data/sellerData";
+import { prisma } from "@/lib/db";
 
-const SellerSectionMain = () => {
+const SellerSectionMain = async () => {
+  const data = await prisma.seller.findMany();
   return (
     <section>
       <div
@@ -27,7 +28,7 @@ const SellerSectionMain = () => {
               </div>
             </div>
             <div className="pt-12 justify-center h-full flex flex-wrap -mx-3 -mt-6">
-              {sellerData.map((data) => {
+              {data.map((data) => {
                 return (
                   <SellerCard
                     key={data.id}

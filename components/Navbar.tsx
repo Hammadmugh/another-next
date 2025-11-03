@@ -23,17 +23,11 @@ const Navbar = () => {
               />
             </Link>
             <p className="text-white text-[14px] sm:text-[15px] my-0">
-              <Link
-                href="https://yalbaih.ae/buyer/login"
-                className="text-white underline"
-              >
+              <Link href="#" className="text-white underline">
                 Login
               </Link>{" "}
               /{" "}
-              <Link
-                href="https://yalbaih.ae/buyer/signup"
-                className="text-white underline"
-              >
+              <Link href="#" className="text-white underline">
                 Register
               </Link>
             </p>
