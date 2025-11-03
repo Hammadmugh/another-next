@@ -31,7 +31,7 @@ const ServicesCard: React.FC<ServiceCardProps> = ({
   favoriteCount,
 }) => {
   return (
-    <div className="w-[220px] h-[380px] bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300">
+    <div className="md:w-[220px] md:h-[380px] lg:w-[220px] lg:h-[380px] sm:w-[200px] bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300">
       <div className="flex items-center justify-between px-4 pt-3">
         <div className="flex items-center gap-2">
           <Image
