@@ -33,7 +33,7 @@ async function main() {
   console.log("✅ Services added successfully!");
 
   for (const userImg of userImgsData) {
-    await prisma.usersImgs.create({ data: userImg });
+    await prisma.imgs.create({ data: userImg });
   }
   console.log("✅ Services added successfully!");
 }

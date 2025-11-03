@@ -16,10 +16,10 @@ import NewsLetterSection from "@/components/NewsLetterSection";
 import FooterComponent from "@/components/FooterComponent";
 import ServicesSliderWraper from "@/components/ServicesSliderWraper";
 import { prisma } from "@/lib/db";
-import type { usersImgs } from "@prisma/client";
+import type { Imgs } from "@prisma/client";
 
 const HomePage = async () => {
-  const data: usersImgs[] = await prisma.usersImgs.findMany();
+  const data: Imgs[] = await prisma.imgs.findMany();
   return (
     <>
       <div
