@@ -1,9 +1,4 @@
 import React from "react";
-import ServicesSlider from "./ServicesSlider";
-import {
-  MdOutlineKeyboardArrowLeft,
-  MdOutlineKeyboardArrowRight,
-} from "react-icons/md";
 import ServicesSliderWraper from "./ServicesSliderWraper";
 
 const RserviceSectionMain = () => {

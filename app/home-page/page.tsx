@@ -4,21 +4,22 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import ServicesLink from "@/components/ServicesLink";
-import ServicesSlider from "@/components/ServicesSlider";
 import GallorySection from "@/components/GallorySection";
 import DealSectionMain from "@/components/DealSectionMain";
 import EservicesSectionMain from "@/components/EservicesSectionMain";
 import RserviceSectionMain from "@/components/RserviceSectionMain";
 import SellerSectionMain from "@/components/SellerSectionMain";
 import DoubtSectionMain from "@/components/DoubtSectionMain";
-import { userImgsData } from "../data/usersImgs";
 import Users from "@/components/Users";
 import GetSectionMain from "@/components/GetSectionMain";
 import NewsLetterSection from "@/components/NewsLetterSection";
 import FooterComponent from "@/components/FooterComponent";
 import ServicesSliderWraper from "@/components/ServicesSliderWraper";
+import { prisma } from "@/lib/db";
+import type { usersImgs } from "@prisma/client";
 
-const HomePage = () => {
+const HomePage = async () => {
+  const data: usersImgs[] = await prisma.usersImgs.findMany();
   return (
     <>
       <div
@@ -118,7 +119,7 @@ antialiased inline-block not-italic leading-none font-black font-[var(--fa-style
                     <div className="md:grid md:grid-cols-2 md:gap-10 lg:grid lg:grid-cols-2 lg:gap-10 flex flex-col items-center justify-center ml-[35px] ">
                       <div>
                         <p className="text-black text-[10px] my-0 flex">
-                          {userImgsData.map((data) => {
+                          {data.map((data) => {
                             return <Users key={data.id} imgSrc={data.imgSrc} />;
                           })}
                         </p>

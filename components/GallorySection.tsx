@@ -1,12 +1,10 @@
-import { GalloryCardData } from "@/app/data/GalloryCardData";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import GalloryCard from "./GalloryCard";
 import { prisma } from "@/lib/db";
+import type { Gallory } from "@prisma/client";
 
 const GallorySection = async () => {
-  const data = await prisma.gallory.findMany();
+  const data: Gallory[] = await prisma.gallory.findMany();
   return (
     <section>
       <div

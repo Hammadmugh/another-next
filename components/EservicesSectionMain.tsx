@@ -1,12 +1,10 @@
-import { EservicesSectionCardData } from "@/app/data/EservicesSectionCardData";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import EservicesSectionCard from "./EservicesSectionCard";
 import { prisma } from "@/lib/db";
+import type { Eservices } from "@prisma/client";
 
 const EservicesSectionMain = async () => {
-  const data = await prisma.eservices.findMany();
+  const data: Eservices[] = await prisma.eservices.findMany();
   return (
     <section>
       <div

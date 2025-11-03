@@ -1,9 +1,10 @@
 import React from "react";
 import SellerCard from "./SellerCard";
 import { prisma } from "@/lib/db";
+import type { Seller } from "@prisma/client";
 
 const SellerSectionMain = async () => {
-  const data = await prisma.seller.findMany();
+  const data: Seller[] = await prisma.seller.findMany();
   return (
     <section>
       <div

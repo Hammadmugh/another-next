@@ -5,9 +5,10 @@ import { FaEllipsisVertical } from "react-icons/fa6";
 import DealSectionCard from "./DealSectionCard";
 import { DealSectionCardData } from "@/app/data/DealSectionCardData";
 import { prisma } from "@/lib/db";
+import type { Deals } from "@prisma/client";
 
 const DealSectionMain = async () => {
-  const data = await prisma.deals.findMany();
+  const data: Deals[] = await prisma.deals.findMany();
   return (
     <section>
       <div
